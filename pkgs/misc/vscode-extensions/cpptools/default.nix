@@ -1,11 +1,8 @@
 { lib, vscode-utils
-, fetchurl, unzip
-, mono, writeScript, runtimeShell
+, fetchurl, mono, writeScript, runtimeShell
 , jq, clang-tools
 , gdbUseFixed ? true, gdb # The gdb default setting will be fixed to specified. Use version from `PATH` otherwise.
 }:
-
-assert gdbUseFixed -> null != gdb;
 
 /*
   Note that this version of the extension still has some nix specific issues
